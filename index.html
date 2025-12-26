@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veg Menu</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+    }
+
+    .header-img {
+      width: 100%;
+      height: auto;
+      max-height: 220px;
+      object-fit: cover;
+    }
+
+    .card {
+      background: #ffffff;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    .title {
+      text-align: center;
+      color: #1a8f2d;
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .info strong {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Train Image -->
+  <img src="train.jpg" alt="Vande Bharat Train" class="header-img">
+
+  <!-- Card -->
+  <div class="card">
+    <div class="title">Veg Menu (Pongal) </div>
+
+    <div class="info">
+      <strong>Licensee :</strong> M/S P. SIVAPRASAD
+    </div>
+
+    <div class="info">
+      <strong>FSSAI No. :</strong> 12424026001058
+    </div>
+
+    <div class="info">
+      <strong>Train Name & No. :</strong> Vande Bharat Express – 20666
+    </div>
+
+    <div class="info">
+      <strong>Menu :</strong>
+      Pongal 150gms+ medhu Vada 30gms pineapple kesari 40gms sambar 100 gms & chutney 40gms 
+    </div>
+    
+    <div class="info">
+  <strong>Date :</strong> <span id="todayDate"></span>
+    </div>
+
+    <div class="info">
+      <strong>Note :</strong> <b><i>For Immediate Consumption</i></b>
+    </div>
+  </div>
+  <script>
+  const today = new Date();
+  const options = { day: 'numeric', month: 'long', year: 'numeric' };
+  document.getElementById('todayDate').textContent =
+    today.toLocaleDateString('en-IN', options);
+  </script>
+
+</body>
+</html>
